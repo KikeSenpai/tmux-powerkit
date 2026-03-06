@@ -2,6 +2,12 @@
 
 All notable changes to tmux-powerkit will be documented in this file.
 
+## [5.23.1](https://github.com/fabioluciano/tmux-powerkit/compare/v5.23.0...v5.23.1) (2026-03-06)
+
+### Bug Fixes
+
+* **packages:** enhance Brew options description for clarity and default behavior ([#204](https://github.com/fabioluciano/tmux-powerkit/issues/204)) ([19fb758](https://github.com/fabioluciano/tmux-powerkit/commit/19fb7589c56046c0f7d4ba659067967e72d68259))
+
 ## [5.23.0](https://github.com/fabioluciano/tmux-powerkit/compare/v5.22.0...v5.23.0) (2026-02-28)
 
 ### Features
