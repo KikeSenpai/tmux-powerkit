@@ -31,6 +31,7 @@ source_guard "renderer_segment_builder" && return 0
 . "${POWERKIT_ROOT}/src/core/logger.sh"
 . "${POWERKIT_ROOT}/src/core/options.sh"
 . "${POWERKIT_ROOT}/src/core/registry.sh"
+. "${POWERKIT_ROOT}/src/core/color_generator.sh"
 . "${POWERKIT_ROOT}/src/renderer/separator.sh"
 . "${POWERKIT_ROOT}/src/renderer/color_resolver.sh"
 
