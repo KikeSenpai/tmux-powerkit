@@ -2,6 +2,12 @@
 
 All notable changes to tmux-powerkit will be documented in this file.
 
+## [5.27.0](https://github.com/fabioluciano/tmux-powerkit/compare/v5.26.0...v5.27.0) (2026-03-27)
+
+### Features
+
+* **appearance:** add macOS appearance plugin with auto/dark/light toggle ([#205](https://github.com/fabioluciano/tmux-powerkit/issues/205)) ([1c9738b](https://github.com/fabioluciano/tmux-powerkit/commit/1c9738b1fa1432c69e06cfbebde721fdedd9d2a2))
+
 ## [5.26.0](https://github.com/fabioluciano/tmux-powerkit/compare/v5.25.0...v5.26.0) (2026-03-23)
 
 ### Features
