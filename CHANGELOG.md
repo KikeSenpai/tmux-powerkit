@@ -2,6 +2,12 @@
 
 All notable changes to tmux-powerkit will be documented in this file.
 
+## [5.28.2](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.1...v5.28.2) (2026-04-20)
+
+### Bug Fixes
+
+* **weather:** return success when static icon mode skips dynamic symbol ([#215](https://github.com/fabioluciano/tmux-powerkit/issues/215)) ([61030bc](https://github.com/fabioluciano/tmux-powerkit/commit/61030bc03073f3be5e44f88dfd131779cce59207))
+
 ## [5.28.1](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.0...v5.28.1) (2026-03-30)
 
 ### Bug Fixes
