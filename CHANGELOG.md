@@ -2,6 +2,12 @@
 
 All notable changes to tmux-powerkit will be documented in this file.
 
+## [5.28.3](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.2...v5.28.3) (2026-04-21)
+
+### Bug Fixes
+
+* **battery:** align warning icon option with plugin contract ([#216](https://github.com/fabioluciano/tmux-powerkit/issues/216)) ([1c977e3](https://github.com/fabioluciano/tmux-powerkit/commit/1c977e3988d562ab7f051005e6f509b7a411f2b8))
+
 ## [5.28.2](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.1...v5.28.2) (2026-04-20)
 
 ### Bug Fixes
