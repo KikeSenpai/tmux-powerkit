@@ -2,6 +2,12 @@
 
 All notable changes to tmux-powerkit will be documented in this file.
 
+## [5.28.4](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.3...v5.28.4) (2026-04-22)
+
+### Bug Fixes
+
+* **windows:** preserve inter-window spacing with separator_style none ([#217](https://github.com/fabioluciano/tmux-powerkit/issues/217)) ([d40126b](https://github.com/fabioluciano/tmux-powerkit/commit/d40126b08bf603aa9c45eeb484a50c9de99af06b))
+
 ## [5.28.3](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.2...v5.28.3) (2026-04-21)
 
 ### Bug Fixes
