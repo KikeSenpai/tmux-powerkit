@@ -525,10 +525,11 @@ _build_spacing_separator() {
 
     # Spacing separator: fg=theme_background, bg=plugin_color
     # Triangle filled with theme background color (looks transparent)
-    if [[ "$side" == "left" ]]; then
-        printf ' #[fg=%s,bg=%s]%s#[none]' "$spacing_fg" "$prev_bg" "$spacing_sep"
+    if [[ -z "$spacing_sep" ]]; then
+        printf '#[fg=%s,bg=%s] #[none]#[fg=%s,bg=%s] #[none]' \
+            "$spacing_fg" "$prev_bg" "$spacing_fg" "$spacing_fg"
     else
-        printf ' #[fg=%s,bg=%s]%s#[none]' "$spacing_fg" "$prev_bg" "$spacing_sep"
+        printf '#[fg=%s,bg=%s]%s#[none]' "$spacing_fg" "$prev_bg" "$spacing_sep"
     fi
 }
 
@@ -782,10 +783,11 @@ render_plugins() {
 
             # Spacing separator: fg=statusbar_bg, bg=plugin_color
             # Triangle filled with statusbar background color on plugin background
-            if [[ "$side" == "left" ]]; then
-                output+=" #[fg=${current_spacing_fg},bg=${prev_bg}]${spacing_sep}#[none]"
+            if [[ -z "$spacing_sep" ]]; then
+                output+="#[fg=${current_spacing_fg},bg=${prev_bg}] #[none]"
+                output+="#[fg=${current_spacing_fg},bg=${current_spacing_bg}] #[none]"
             else
-                output+=" #[fg=${current_spacing_fg},bg=${prev_bg}]${spacing_sep}#[none]"
+                output+="#[fg=${current_spacing_fg},bg=${prev_bg}]${spacing_sep}#[none]"
             fi
             prev_bg="${current_spacing_bg}"
         # For same group without global spacing, still need to update prev_bg context
