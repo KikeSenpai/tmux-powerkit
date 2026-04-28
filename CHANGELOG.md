@@ -2,6 +2,12 @@
 
 All notable changes to tmux-powerkit will be documented in this file.
 
+## [5.28.5](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.4...v5.28.5) (2026-04-28)
+
+### Bug Fixes
+
+* **renderer:** preserve session-window gap with separator_style none ([#218](https://github.com/fabioluciano/tmux-powerkit/issues/218)) ([631b5a4](https://github.com/fabioluciano/tmux-powerkit/commit/631b5a496896fbb398dc92f1187b41218595956d))
+
 ## [5.28.4](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.3...v5.28.4) (2026-04-22)
 
 ### Bug Fixes
