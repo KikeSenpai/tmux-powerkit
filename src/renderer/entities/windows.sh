@@ -274,12 +274,7 @@ _windows_build_format() {
     format+=$(_windows_build_separator "$side" "$first_segment_bg" "$previous_bg")
     # Show index section only if enabled
     if [[ "$show_index" == "true" ]]; then
-        # Add left padding only when rendering from left side
-        if [[ "$side" == "left" ]]; then
-            format+="#[fg=${index_fg},bg=${index_bg}${style_attr}] $(window_get_index_display)"
-        else
-            format+="#[fg=${index_fg},bg=${index_bg}${style_attr}]$(window_get_index_display) "
-        fi
+        format+="#[fg=${index_fg},bg=${index_bg}${style_attr}]$(window_get_index_display) "
         format+=$(_windows_build_index_sep "$side" "$index_bg" "$content_bg")
     fi
     # Add left padding only when rendering from left side
@@ -340,12 +335,7 @@ _windows_build_current_format() {
     format+=$(_windows_build_separator "$side" "$first_segment_bg" "$previous_bg")
     # Show index section only if enabled
     if [[ "$show_index" == "true" ]]; then
-        # Add left padding only when rendering from left side
-        if [[ "$side" == "left" ]]; then
-            format+="#[fg=${index_fg},bg=${index_bg}${style_attr}] $(window_get_index_display)"
-        else
-            format+="#[fg=${index_fg},bg=${index_bg}${style_attr}]$(window_get_index_display) "
-        fi
+        format+="#[fg=${index_fg},bg=${index_bg}${style_attr}]$(window_get_index_display) "
         format+=$(_windows_build_index_sep "$side" "$index_bg" "$content_bg")
     fi
     # Add left padding only when rendering from left side
