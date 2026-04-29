@@ -2,6 +2,12 @@
 
 All notable changes to tmux-powerkit will be documented in this file.
 
+## [5.28.6](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.5...v5.28.6) (2026-04-29)
+
+### Bug Fixes
+
+* **renderer:** window index padding and spacing without separators ([#219](https://github.com/fabioluciano/tmux-powerkit/issues/219)) ([1c4dd5b](https://github.com/fabioluciano/tmux-powerkit/commit/1c4dd5b05e6badbb087e307a4a43c767726ce8bb))
+
 ## [5.28.5](https://github.com/fabioluciano/tmux-powerkit/compare/v5.28.4...v5.28.5) (2026-04-28)
 
 ### Bug Fixes
