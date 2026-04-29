@@ -190,6 +190,19 @@ _windows_get_spacing_sep_char() {
     fi
 }
 
+# Build window index text with padding appropriate to separator style.
+# Glyph separators provide a visual right edge, but separator_style=none needs
+# an explicit trailing cell before the index-to-content transition.
+_windows_build_index_text() {
+    local side="$1" index_fg="$2" index_bg="$3" style_attr="$4"
+
+    if [[ "$side" == "left" && -n "$_W_SEP_CHAR" ]]; then
+        printf '#[fg=%s,bg=%s%s] %s' "$index_fg" "$index_bg" "$style_attr" "$(window_get_index_display)"
+    else
+        printf '#[fg=%s,bg=%s%s]%s ' "$index_fg" "$index_bg" "$style_attr" "$(window_get_index_display)"
+    fi
+}
+
 # Build spacing separator (if enabled)
 # Usage: _windows_build_spacing "side" "content_bg"
 # Note: "center" behaves like "left" for separator direction
@@ -274,12 +287,7 @@ _windows_build_format() {
     format+=$(_windows_build_separator "$side" "$first_segment_bg" "$previous_bg")
     # Show index section only if enabled
     if [[ "$show_index" == "true" ]]; then
-        # Add left padding only when rendering from left side
-        if [[ "$side" == "left" ]]; then
-            format+="#[fg=${index_fg},bg=${index_bg}${style_attr}] $(window_get_index_display)"
-        else
-            format+="#[fg=${index_fg},bg=${index_bg}${style_attr}]$(window_get_index_display) "
-        fi
+        format+=$(_windows_build_index_text "$side" "$index_fg" "$index_bg" "$style_attr")
         format+=$(_windows_build_index_sep "$side" "$index_bg" "$content_bg")
     fi
     # Add left padding only when rendering from left side
@@ -340,12 +348,7 @@ _windows_build_current_format() {
     format+=$(_windows_build_separator "$side" "$first_segment_bg" "$previous_bg")
     # Show index section only if enabled
     if [[ "$show_index" == "true" ]]; then
-        # Add left padding only when rendering from left side
-        if [[ "$side" == "left" ]]; then
-            format+="#[fg=${index_fg},bg=${index_bg}${style_attr}] $(window_get_index_display)"
-        else
-            format+="#[fg=${index_fg},bg=${index_bg}${style_attr}]$(window_get_index_display) "
-        fi
+        format+=$(_windows_build_index_text "$side" "$index_fg" "$index_bg" "$style_attr")
         format+=$(_windows_build_index_sep "$side" "$index_bg" "$content_bg")
     fi
     # Add left padding only when rendering from left side
